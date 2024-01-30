@@ -1,5 +1,6 @@
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 function Home(){
+    const navigate = useNavigate();
     return(
         <>
         
@@ -10,6 +11,10 @@ function Home(){
             node.js sooner and then on mongo DB. hope for the best. 
             </p>
             <Link to='/about'>Go to about Page</Link>
+            <br />
+            <button onClick={()=> navigate('/about')} >GO to about page</button> &nbsp;
+            
+            <button onClick={()=>navigate('/filter')} >Go to Filter page</button>
         </>
     )
 }
